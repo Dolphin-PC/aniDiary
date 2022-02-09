@@ -1,18 +1,48 @@
-import { Container } from '@mui/material';
+import styled from '@emotion/styled';
+import { Button, Container, Divider, Paper, Stack } from '@mui/material';
 import Animation from '../../components/Animation/Animation';
 
 const Box = (props) => {
     return (
-        <>
-            <Container component="main" maxWidth="md">
-                <Animation
-                    animationName='animal'
-                    width={150}
-                    height={150}
-                />
-            </Container>
-        </>
+        <Row>
+            <Animation
+                animationName='animal'
+                width='20vw'
+                height='20vh'
+            />
+
+            <div>
+                <h2>Ani Diary</h2>
+                <Divider />
+            </div>
+
+            <ButtonContainer>
+                {/* TODO 카카오 로그인 버튼 */}
+                <Button>카카오 로그인</Button>
+                {/* TODO 구글 로그인 버튼 */}
+                <Button>구글 로그인</Button>
+            </ButtonContainer>
+
+        </Row>
+
     )
 }
+
+const Row = styled.div({
+    height: '80vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+});
+
+const ButtonContainer = styled.div({
+    position: 'fixed',
+    bottom: '10vh',
+    display: 'flex',
+    flexDirection: 'column',
+})
+
+
 
 export default Box;

@@ -6,11 +6,12 @@ import lottie from 'lottie-web';
 
 interface AnimationProps {
     animationName: string;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
+    margin?: string;
 }
 
-const Animation: React.FC<AnimationProps> = ({ animationName, width = 100, height = 100 }) => {
+const Animation: React.FC<AnimationProps> = ({ animationName, width, height, margin }) => {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -31,6 +32,7 @@ const Animation: React.FC<AnimationProps> = ({ animationName, width = 100, heigh
                 ref={ref}
                 width={width}
                 height={height}
+                margin={margin}
             />
         </>
 
@@ -40,17 +42,16 @@ const Animation: React.FC<AnimationProps> = ({ animationName, width = 100, heigh
 
 
 interface AnimationContainerProp {
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
+    margin?: string;
 }
 
 const AnimationContainer = styled.div<AnimationContainerProp>(
-    {
-        margin: '0 auto'
-    },
     props => ({
-        width: props.width + 'px',
-        height: props.height + 'px'
+        width: props.width,
+        height: props.height,
+        margin: props.margin
     })
 )
 
