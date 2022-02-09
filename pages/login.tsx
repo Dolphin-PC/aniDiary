@@ -1,12 +1,11 @@
-import Link from "next/link";
+import BoxContainer from "../containers/Login/Box";
 
-const login = (props) => {
+const Login = (props) => {
     return (
-        <div>
-            <h2>{props.name}</h2>
-            <Link href="/">Back</Link>
-        </div>
+        <>
+            <BoxContainer />
+        </>
     )
 };
 
-export default login;
+export default Login;
