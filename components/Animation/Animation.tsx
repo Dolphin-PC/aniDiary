@@ -48,6 +48,9 @@ interface AnimationContainerProp {
 }
 
 const AnimationContainer = styled.div<AnimationContainerProp>(
+    {
+        maxWidth: '200px'
+    },
     props => ({
         width: props.width,
         height: props.height,
