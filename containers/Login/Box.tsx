@@ -7,8 +7,7 @@ const Box = (props) => {
         <Row>
             <Animation
                 animationName='animal'
-                width='20vw'
-                height='20vh'
+                width='40vw'
             />
 
             <div>

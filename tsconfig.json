@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "redux/index.js", "pages/Login.tsx"  ],
+, "redux/index.js", "pages/Login1.tsx"  ],
   "exclude": [
     "node_modules"
   ]
