@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import { Button, Container, Divider, Paper, Stack } from '@mui/material';
-import Animation from '../../components/Animation/Animation';
 
-const Box = (props) => {
+import Animation from '../../components/Animation/Animation';
+import GoogleLoginButton from '../../components/Button/GoogleLoginButton';
+
+const LoginBox = (props) => {
     return (
         <Row>
             <Animation
@@ -17,9 +19,9 @@ const Box = (props) => {
 
             <ButtonContainer>
                 {/* TODO 카카오 로그인 버튼 */}
-                <Button>카카오 로그인</Button>
+                {/* <Button>카카오 로그인</Button> */}
                 {/* TODO 구글 로그인 버튼 */}
-                <Button>구글 로그인</Button>
+                <GoogleLoginButton text="구글 로그인"></GoogleLoginButton>
             </ButtonContainer>
 
         </Row>
@@ -44,4 +46,4 @@ const ButtonContainer = styled.div({
 
 
 
-export default Box;
+export default LoginBox;

@@ -1,12 +1,11 @@
-import Login from "./LoginPage";
+import SplashPage from './splash';
 
+const IndexPage = () => {
 
-const Index = () => {
   return (
-    <>
-      <Login />
-    </>
+    <SplashPage />
   )
+
 }
 
-export default Index;
+export default IndexPage;

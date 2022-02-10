@@ -1,9 +1,9 @@
-import BoxContainer from "../containers/Login/Box";
+import LoginBox from "../containers/Login/LoginBox";
 
 const Login = (props) => {
     return (
         <>
-            <BoxContainer />
+            <LoginBox />
         </>
     )
 };
