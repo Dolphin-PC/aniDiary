@@ -1,11 +1,9 @@
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import SplashBox from "../../containers/Splash/SplashBox";
 
-const SplashPage = () => {
+export default function SplashPage(props): JSX.Element {
     return (
         <SplashBox />
     )
-}
 
-
-export default SplashPage;
+};

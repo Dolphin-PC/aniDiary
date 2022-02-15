@@ -7,7 +7,7 @@ interface PropTypes {
 
 }
 
-const GoogleLoginButton: React.FC<PropTypes> = (props) => {
+export default function GoogleLoginButton(props: PropTypes): JSX.Element {
 
     function signIn() {
         const auth = getAuth();
@@ -20,7 +20,10 @@ const GoogleLoginButton: React.FC<PropTypes> = (props) => {
             <div style={loginBtnStyle} onClick={signIn}></div>
         </>
     );
-}
+
+};
+
+
 
 const loginBtnStyle = {
     background: `no-repeat center/90% url(${GoogleImg.src})`,
@@ -30,5 +33,3 @@ const loginBtnStyle = {
 }
 
 
-
-export default GoogleLoginButton;

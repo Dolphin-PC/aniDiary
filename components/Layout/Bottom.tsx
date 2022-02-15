@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 
-export default function Bottom(props): JSX.Element {
+export default function Bottom(): JSX.Element {
     const router = useRouter();
 
     function clickOnTab(pathname) {

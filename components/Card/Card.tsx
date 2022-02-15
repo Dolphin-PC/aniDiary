@@ -1,6 +1,5 @@
-import styled from "@emotion/styled"
 
-export default function CardComponent(props) {
+export default function CardComponent(props): JSX.Element {
     const imgSrc = props.imageSrc.src;
 
     return <>

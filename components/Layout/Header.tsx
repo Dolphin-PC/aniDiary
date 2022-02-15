@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Header(props) {
+export default function Header(): JSX.Element {
     return <div className="container">
         <div className="logo">
             <Image

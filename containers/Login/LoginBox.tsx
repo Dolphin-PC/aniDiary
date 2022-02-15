@@ -4,7 +4,8 @@ import { Button, Container, Divider, Paper, Stack } from '@mui/material';
 import Animation from '../../components/Animation/Animation';
 import GoogleLoginButton from '../../components/Button/GoogleLoginButton';
 
-const LoginBox = (props) => {
+
+export default function LoginBox(): JSX.Element {
     return (
         <Row>
             <Animation
@@ -24,9 +25,9 @@ const LoginBox = (props) => {
             </ButtonContainer>
 
         </Row>
-
     )
-}
+};
+
 
 const Row = styled.div({
     height: '80vh',
@@ -41,8 +42,4 @@ const ButtonContainer = styled.div({
     bottom: '10vh',
     display: 'flex',
     flexDirection: 'column',
-})
-
-
-
-export default LoginBox;
+});

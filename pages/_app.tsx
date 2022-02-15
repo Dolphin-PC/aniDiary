@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import '../styles/global.css'
 import { useRouter } from 'next/router';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   initializeApp(firebaseConfig);
@@ -35,4 +35,3 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp;

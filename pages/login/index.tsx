@@ -1,13 +1,10 @@
 import LoginBox from "../../containers/Login/LoginBox";
 
-const Login = (props) => {
+
+export default function LoginPage(props): JSX.Element {
     return (
         <>
             <LoginBox />
         </>
     )
 };
-
-
-
-export default Login;

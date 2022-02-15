@@ -11,7 +11,7 @@ interface AnimationProps {
     margin?: string;
 }
 
-const Animation: React.FC<AnimationProps> = ({ animationName, width, height, margin }) => {
+export default function Animation({ animationName, width, height, margin }: AnimationProps): JSX.Element {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -37,9 +37,8 @@ const Animation: React.FC<AnimationProps> = ({ animationName, width, height, mar
         </>
 
     )
-}
 
-
+};
 
 interface AnimationContainerProp {
     width?: string;
@@ -57,5 +56,3 @@ const AnimationContainer = styled.div<AnimationContainerProp>(
         margin: props.margin
     })
 )
-
-export default Animation;

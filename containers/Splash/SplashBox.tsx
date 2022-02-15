@@ -2,7 +2,8 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Router from "next/router";
 import { useEffect } from "react";
 
-const SplashBox = () => {
+
+export default function SplashBox(props): JSX.Element {
     useEffect(() => {
         onAuthStateChanged(getAuth(), (user) => {
             if (user) {
@@ -17,6 +18,5 @@ const SplashBox = () => {
         // TODO Splash 화면 UI
         <h1>Splash Page</h1>
     )
-};
 
-export default SplashBox;
+};

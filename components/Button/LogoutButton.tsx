@@ -4,8 +4,7 @@ import { getAuth, signOut } from 'firebase/auth';
 
 import Router from 'next/router';
 
-
-const LogoutButton: React.FC = (props) => {
+export default function LogoutButton(props): JSX.Element {
 
     function Logout() {
         signOut(getAuth()).then(() => {
@@ -17,6 +16,5 @@ const LogoutButton: React.FC = (props) => {
     return (
         <Button onClick={Logout}>로그아웃</Button>
     )
-}
+};
 
-export default LogoutButton;
