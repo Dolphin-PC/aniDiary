@@ -1,8 +1,6 @@
 
 import { getAuth, signInWithRedirect, GoogleAuthProvider, Auth, User, getRedirectResult, signInWithPopup, setPersistence, browserLocalPersistence } from "firebase/auth";
 import GoogleImg from '../../assets/image/btn_google_signin_light_normal_web.png';
-import Image from 'next/image'
-
 
 interface PropTypes {
     text: String;

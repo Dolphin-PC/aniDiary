@@ -1,4 +1,5 @@
 body{
+    border:1px solid; /* 개발용 */
     max-width: 600px;
     margin: 0 auto;
     height: 100vh;
