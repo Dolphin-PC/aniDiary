@@ -1,4 +1,3 @@
-import { Alert, Snackbar } from "@mui/material";
 import { useRouter } from "next/router";
 import Bottom from "./Bottom";
 import Header from "./Header";
@@ -7,7 +6,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-const AppLayout: React.FC<Props> = ({ children }) => {
+export default function AppLayout({ children }: Props): JSX.Element {
     const router = useRouter();
 
     console.log(router.pathname);
@@ -15,11 +14,11 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     return (
         <>
             <Header />
-            {children}
+            <div>{children}</div>
             <Bottom />
         </>
     )
-}
+};
 
 
-export default AppLayout;
+

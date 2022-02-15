@@ -5,17 +5,20 @@ import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebase.config';
 import AppLayout from '../components/Layout/AppLayout';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import Router from 'next/router';
 import { useEffect } from 'react';
 import '../styles/global.css'
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
 
   initializeApp(firebaseConfig);
 
   useEffect(() => {
+    router.push('/splash');
+
     // TODO 화면 전환 부드럽게 처리하기 -> Local Storage로 변경/활용.
-    onAuthStateChanged(getAuth(), (user) => !user ? Router.push('/login') : '');
+    onAuthStateChanged(getAuth(), (user) => !user ? router.push('/login') : '');
   }, [])
 
   return (
@@ -28,8 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <AppLayout>
         <Component {...pageProps} />
       </AppLayout>
-
-
     </>
   )
 }
