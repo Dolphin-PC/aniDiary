@@ -9,14 +9,24 @@ interface Props {
 export default function AppLayout({ children }: Props): JSX.Element {
     const router = useRouter();
 
-    console.log(router.pathname);
-
     return (
-        <>
+        <div className="container">
             <Header />
-            <div>{children}</div>
+            <div className="content">{children}</div>
             <Bottom />
-        </>
+
+            <style jsx>{`
+                div.container {
+                    height:100vh;
+                    position:relative;
+                    overflow:auto;
+                }
+                div.content { 
+                    height:85vh;
+                    overflow:auto;
+                }
+                `}</style>
+        </div>
     )
 };
 

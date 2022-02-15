@@ -1,5 +1,11 @@
+* {
+    box-sizing: initial;
+}
+
 body{
     max-width: 600px;
     margin: 0 auto;
     height: 100vh;
 }
+
+::-webkit-scrollbar { display: none; }

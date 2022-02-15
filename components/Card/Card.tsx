@@ -4,6 +4,7 @@ export default function CardComponent(props): JSX.Element {
 
     return <>
         <div className="card">
+
         </div>
 
         <style jsx>{`
