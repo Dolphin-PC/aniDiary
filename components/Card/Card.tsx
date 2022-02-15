@@ -10,7 +10,7 @@ export default function CardComponent(props) {
         <style jsx>{`
             div.card{
                 height:80vh;
-                margin: 10px 30px;
+                margin: 10px 30px 100px 30px;
                 border-radius:50px;
                 background: no-repeat url(${imgSrc});
             }

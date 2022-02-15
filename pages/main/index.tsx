@@ -6,7 +6,8 @@ import testImage from '../../assets/image/image1.jpeg';
 
 const MainPage = () => {
     return (
-        <div>
+        <div >
+            <Card imageSrc={testImage} />
             <Card imageSrc={testImage} />
         </div>
     )

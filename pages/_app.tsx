@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     // TODO 화면 전환 부드럽게 처리하기 -> Local Storage로 변경/활용.
-    onAuthStateChanged(getAuth(), (user) => !user ? Router.push('/login') : Router.push('/main'));
+    onAuthStateChanged(getAuth(), (user) => !user ? Router.push('/login') : '');
   }, [])
 
   return (

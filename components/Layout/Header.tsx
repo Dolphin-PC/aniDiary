@@ -20,6 +20,9 @@ export default function Header(props) {
                 align-items:center;
                 justify-content:space-between;
                 padding: 0px 10px;
+                position:sticky;
+                top:0;
+                background-color:white;
             }
             div.logo{
                 width:100px;
