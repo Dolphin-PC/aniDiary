@@ -1,4 +1,4 @@
-import LogoutButton from "../components/Button/LogoutButton";
+import LogoutButton from "../../components/Button/LogoutButton";
 
 const MainPage = () => {
     return (

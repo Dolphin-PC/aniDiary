@@ -10,12 +10,11 @@ const SplashBox = () => {
             } else {
                 Router.push('/login')
             }
-
-            console.log(user);
         })
     }, [])
 
     return (
+        // TODO Splash 화면 UI
         <h1>Splash Page</h1>
     )
 };

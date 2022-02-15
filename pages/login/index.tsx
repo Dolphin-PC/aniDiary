@@ -1,4 +1,4 @@
-import LoginBox from "../containers/Login/LoginBox";
+import LoginBox from "../../containers/Login/LoginBox";
 
 const Login = (props) => {
     return (

@@ -20,7 +20,6 @@ const LoginBox = (props) => {
             <ButtonContainer>
                 {/* TODO 카카오 로그인 버튼 */}
                 {/* <Button>카카오 로그인</Button> */}
-                {/* TODO 구글 로그인 버튼 */}
                 <GoogleLoginButton text="구글 로그인"></GoogleLoginButton>
             </ButtonContainer>
 

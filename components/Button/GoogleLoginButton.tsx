@@ -1,10 +1,7 @@
-import { Button } from "@mui/material";
-import { sign } from "crypto";
 
 import { getAuth, signInWithRedirect, GoogleAuthProvider, Auth, User, getRedirectResult, signInWithPopup, setPersistence, browserLocalPersistence } from "firebase/auth";
-import Router from "next/router";
-import { useEffect, useState } from "react";
-
+import GoogleImg from '../../assets/image/btn_google_signin_light_normal_web.png';
+import Image from 'next/image'
 
 
 interface PropTypes {
@@ -14,26 +11,26 @@ interface PropTypes {
 
 const GoogleLoginButton: React.FC<PropTypes> = (props) => {
 
-
     function signIn() {
         const auth = getAuth();
         setPersistence(auth, browserLocalPersistence);
-        const provider = new GoogleAuthProvider();
-
-        signInWithRedirect(auth, provider).then(res => {
-            Router.push('/main');
-        })
-
-        // getRedirectResult(auth).then((res) => {
-        //     console.log('res', res);
-        //     console.log('user', res.user);
-        // })
+        signInWithRedirect(auth, new GoogleAuthProvider());
     }
 
     return (
-        <Button onClick={signIn}>{props.text}</Button>
+        <>
+            <div style={loginBtnStyle} onClick={signIn}></div>
+        </>
     );
 }
+
+const loginBtnStyle = {
+    background: `no-repeat center/90% url(${GoogleImg.src})`,
+    width: '300px',
+    height: '60px',
+    cursor: 'pointer',
+}
+
 
 
 export default GoogleLoginButton;
